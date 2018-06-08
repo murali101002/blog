@@ -1,0 +1,12 @@
+<div fxLayout="row">
+  <div fxFlex></div>
+  <div fxFlex="75%" class="comment-container">
+    <div class="comment-box">
+      <textarea [(ngModel)]='comment' [placeholder]='placeholderText'></textarea>
+    </div>
+    <div class="comment-submit">
+      <button [disabled]='!comment' class="submit-button">Comment</button>
+    </div>
+  </div>
+  <div fxFlex></div>
+</div>

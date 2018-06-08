@@ -1,0 +1,31 @@
+.comment-box textarea {
+  resize: none;
+  width: 65%;
+  height: 100px;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+  overflow: hidden;
+}
+.comment-box {
+  margin-top: 5%;
+}
+.submit-button {
+  background-color: #90b4da;
+  color: #fff;
+  border-width: 1px;
+  border-color: black;
+  width: 10%;
+  font-size: 15px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 55%;
+}
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}

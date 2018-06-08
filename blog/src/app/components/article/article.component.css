@@ -1,0 +1,16 @@
+.blog-content-container {
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 7%;
+  padding: 2%;
+}
+.blog-article-title {
+  font-family: 'Fjord One', serif;
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #0e0e0e;
+}
+.blog-article-content {
+  font-size: 18px;
+  line-height: 2;
+}
