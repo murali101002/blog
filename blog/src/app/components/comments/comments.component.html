@@ -5,8 +5,14 @@
       <textarea [(ngModel)]='comment' [placeholder]='placeholderText'></textarea>
     </div>
     <div class="comment-submit">
-      <button [disabled]='!comment' class="submit-button">Comment</button>
+      <button [disabled]='!comment' class="submit-button" (click)='submitComment()'>Comment</button>
     </div>
   </div>
   <div fxFlex></div>
+</div>
+<div class="comments">
+  <div *ngFor='let comment of comments' class="comment">
+    <div class="comment-name">{{comment?.name}}</div>&nbsp;says
+    <div class="comment-text">{{comment?.text}}</div>
+  </div>
 </div>

@@ -27,5 +27,20 @@ button[disabled]{
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
+  border-radius: 6px;
   cursor: not-allowed;
+}
+.comment {
+  background-color: #fff;
+  width: 53%;
+  border-radius: 6px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 15px;
+}
+.comments {
+  margin-left: 16%;
+}
+.comment-name {
+  font-weight: bold;
 }

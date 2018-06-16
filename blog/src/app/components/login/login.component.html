@@ -1,0 +1,20 @@
+<div flexLayout="row">
+  <div fxFlex></div>
+  <div fxFlex="35%" class="login-form">
+    <div class="login-label">Login</div>
+    <form [formGroup]="loginForm">
+      <div class="form-input"><input type="email" formControlName="email" placeholder="Email" required></div>
+      <div class="form-input"><input type="password" formControlName="password" placeholder="Password" required></div>
+      <div flexLayout="row">
+        <div fxFlex='50%'>
+          <button class="login-button" (click)='login()' [disabled]='!loginForm.valid'>Login</button>
+        </div>
+        <div fxFlex='50%'>
+          <button class="login-button" (click)='register()' [disabled]='!loginForm.valid'>Sign Up</button>
+        </div>
+      </div>
+      <small>{{errorMessage}}</small>
+    </form>
+  </div>
+  <div fxFlex></div>
+</div>
