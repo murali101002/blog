@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDC4vrKXPqc3cPms944bM78NChzsftYFd0',
-  authDomain: 'sotheby-blog.firebaseapp.com',
-  databaseURL: 'https://sotheby-blog.firebaseio.com',
+  apiKey: {{your_api_key}},
+  authDomain: {{your_app_domain}},
+  databaseURL: {{your_database_url}},
   projectId: 'sotheby-blog',
   storageBucket: '',
-  messagingSenderId: '716768264541'
+  messagingSenderId: {{your_message_id}}
 };
