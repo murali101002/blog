@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
     this.af.auth.signInWithEmailAndPassword(this.loginForm.controls['email'].value, this.loginForm.controls['password'].value)
       .then(user => {
         console.log(user);
+        localStorage.setItem('token', user.user.email);
         this.router.navigate(['/home']);
       })
       .catch(error => {
@@ -42,6 +43,7 @@ export class LoginComponent implements OnInit {
     this.af.auth.createUserWithEmailAndPassword(this.loginForm.controls['email'].value, this.loginForm.controls['password'].value)
       .then(user => {
         console.log(user);
+        localStorage.setItem('token', user.user.email);
         this.router.navigate(['/home']);
       })
       .catch(error => {

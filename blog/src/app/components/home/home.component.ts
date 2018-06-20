@@ -1,5 +1,7 @@
+import {Router} from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-home',
@@ -10,9 +12,13 @@ export class HomeComponent implements OnInit {
 
   isNavbarCollapsed = true;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['login']);
   }
 
 }

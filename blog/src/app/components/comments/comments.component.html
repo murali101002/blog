@@ -12,7 +12,7 @@
 </div>
 <div class="comments">
   <div *ngFor='let comment of comments' class="comment">
-    <div class="comment-name">{{comment?.name}}</div>&nbsp;says
+    <div class="comment-name">{{comment?.name + ':'}}</div>
     <div class="comment-text">{{comment?.text}}</div>
   </div>
 </div>

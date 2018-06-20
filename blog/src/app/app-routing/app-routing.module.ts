@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from 'src/app/components/login/login.component';
 import { SignUpComponent } from 'src/app/components/sign-up/sign-up.component';
+import { AuthGaurdService } from 'src/app/gaurds/auth-gaurd/auth-gaurd.service';
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGaurdService]
   },
   {
     path: 'login',

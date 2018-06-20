@@ -1,6 +1,6 @@
 import { AuthService } from '../../services/shared/auth.service';
 import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database-deprecated';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseApp } from 'angularfire2';
 
@@ -17,7 +17,11 @@ export class CommentsComponent implements OnInit {
   public comments: any[];
   private ref;
 
-  constructor(private db: AngularFireDatabase, private authService: AuthService, private firebaseApp: FirebaseApp) {
+  constructor(private db: AngularFireDatabase,
+    private authService: AuthService,
+    private firebaseApp: FirebaseApp,
+    private changeDetector: ChangeDetectorRef
+  ) {
   }
 
   submitComment() {
@@ -36,6 +40,7 @@ export class CommentsComponent implements OnInit {
       snapshot.forEach(item => {
         this.comments.push(item.val());
       });
+      this.changeDetector.detectChanges();
       console.log(this.comments);
     },
       error => {

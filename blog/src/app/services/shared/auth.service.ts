@@ -22,6 +22,12 @@ export class AuthService {
     });
    }
 
+   isAuthenticated(): boolean {
+     const token = localStorage.getItem('token');
+     console.log('token', token);
+     return (token && token.length > 0) ? true : false;
+   }
+
    getAuthState() {
      return this.authState;
    }
